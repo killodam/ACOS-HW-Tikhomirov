@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # sum() — sums all arguments using expr
-#   outputs the integer sum on success
-#   outputs 0 if any argument is non-numeric (expr fails)
+#  outputs the integer sum on success
+# outputs 0 if any argument is non-numeric
 #   all error messages are suppressed (redirected to /dev/null)
 sum() {
     local result=0
@@ -18,7 +18,7 @@ sum() {
     echo "$result"
 }
 
-# Read two lines of space-separated numbers
+#     Read two lines of space-separated numbers
 read -r line1
 read -r line2
 
