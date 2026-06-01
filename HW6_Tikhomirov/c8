@@ -1,0 +1,14 @@
+#!/bin/bash
+# Exit status of 'read':
+#   0  — user typed something (or just Enter)
+#   1  — EOF (Ctrl+D, i.e. Enter was NOT pressed)
+# In both cases where name is empty we fall back to "tmpuser?"
+
+read -p "Enter your name: " name   # -p prints prompt without trailing \n
+
+if [ -n "$name" ]; then
+    echo "Hello, $name!"
+else
+    # covers: empty Enter OR Ctrl+D (EOF, no Enter pressed)
+    echo "Hello, tmpuser?"
+fi
